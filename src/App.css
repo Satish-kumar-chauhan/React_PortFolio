@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,500;1,600;1,700&display=swap');
 .App {
   text-align: center;
 }
@@ -34,5 +35,570 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+:root{
+  --bg-light-cream:#f0efea;
+  --bg-dark-cream:#CDC2AE;
+  --light-sky:#C2DED1;
+  --not-full-black:#354259;
+  --skin-color:#F24C4C;
+  --transition:all 0.3s ease-in-out;
+  /* --skin-color1:#F24C4C;
+  --skin-color2:#ff6f05;
+  --skin-color3:#249583;
+  --skin-color4:#0b52c0;
+  --skin-color5:#ff56b8; */
+}
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  font-size: 14px;
+}
+
+ul{
+  list-style: none;
+  padding-inline-start: 0%;
+}
+a{
+  text-decoration: none;
+}
+.appSub{
+  display: block;
+  position: relative;
+}
+.appSub .aside{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  background-color: var(--bg-light-cream);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: var(--transition);
+}
+.appSub .aside.dark{
+  background-color: var(--not-full-black) !important;
+  color: var(--bg-light-cream);
+}
+.appSub .logo{
+  position: absolute;
+  top: 50px;
+  left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100px;
+}
+.appSub .logo a{
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: var(--not-full-black);
+}
+.appSub .aside.dark .logo a{
+  color: var(--bg-light-cream);
+}
+.appSub .logo a span{
+  font-family: 'Clicker Script',cursive;
+}
+.appSub .logo::after,.appSub .aside .logo::before{
+  content: '';
+  position: absolute;
+  height: 30px;
+  width: 30px;
+}
+.appSub .logo::before{
+  right: 0;
+  top: 0;
+  border-top: 5px solid var(--skin-color);
+  border-right: 5px solid var(--skin-color);
+}
+.appSub .logo::after{
+  left: 0;
+  bottom: 0;
+  border-left: 5px solid var(--skin-color);
+  border-bottom: 5px solid var(--skin-color);
+}
+.appSub .aside ul li{
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+.appSub .aside ul li a{
+  display: block;
+  padding: 10px 30px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--not-full-black);
+}
+.appSub .aside.dark ul li a{
+  color: var(--bg-light-cream);
+}
+.appSub .aside ul li a.active{
+  color: var(--skin-color);
+}
+.appSub .aside .smallScreenOpen{
+  position: absolute;
+  top: 0;
+  right: -60px;
+  height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  border-radius: 5px;
+  visibility: hidden;
+}
+.appSub .main-content{
+  position: relative;
+  width: 75%;
+  float: right;
+  height: 100vh;
+  background-color: var(--light-sky);
+  padding: 15px;
+  box-sizing: border-box;
+  overflow: scroll;
+  overflow-x: hidden;
+  transition: var(--transition);
+}
+.appSub .main-content.dark{
+  background-color: var(--not-full-black) !important;
+}
+.appSub .main-content .section{
+  position: relative;
+  width: 100%;
+}
+.appSub .main-content .section .sectionSub{
+  margin-top: 50px;
+}
+.appSub .main-content .section .pageHeading{
+  text-align: left;
+  color:var(--not-full-black);
+  position: relative;
+}
+.appSub .main-content .section .pageHeading::before{
+  position:absolute;
+  content: '';
+  height: 4px;
+  background-color: var(--skin-color);
+  width: 100px;
+  bottom: 0px;
+  left: 0%;
+  border-radius: 5px;
+}
+.appSub .main-content .section .pageHeading::after{
+  position:absolute;
+  content: '';
+  height: 4px;
+  background-color: var(--skin-color);
+  width: 80px;
+  bottom: -7px;
+  left: 0%;
+  border-radius: 5px;
+}
+
+/* Home */
+.appSub .main-content .section .home{
+  position: relative;
+  text-align: left;
+  background-color: var(--bg-light-cream);
+  padding: 10px;
+  border-radius: 10px;
+}
+.appSub .main-content .section .home .homeInner{
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 400px;
+}
+.appSub .main-content .section .home .homeInner .myDescription{
+  flex:0 0 60%;
+  max-width: 0 0 60%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.appSub .main-content .section .home .homeInner .myDescription h4 span{
+  color: var(--skin-color);
+}
+.appSub .main-content .section .home .homeInner .myDescription h4 .artistName{
+  font-family: 'Clicker Script',cursive;
+  font-size: 20px;
+  font-weight: 700;
+}
+.appSub .main-content .section .home .homeInner .myDescription button{
+  background-color: var(--skin-color);
+  outline: none;
+  border: 1px solid #ccc;
+  color: var(--bg-light-cream);
+  border-radius: 50px;
+  padding: 12px 30px;
+}
+.appSub .main-content .section .home .homeInner .myDescription button a{
+  color: var(--bg-light-cream);
+}
+.appSub .main-content .section .home .homeInner .myImg{
+  flex:0 0 40%;
+  max-width: 0 0 40%;
+}
+.appSub .main-content .section .home .homeInner .myImg .myImgInner{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+} 
+.appSub .main-content .section .home .homeInner .myImg .myImgInner::before{
+  position: absolute;
+  content: '';
+  height: 30%;
+  width: 30%;
+  left: 0;
+  top: 0;
+  border-top: 5px solid var(--skin-color);
+  border-left: 5px solid var(--skin-color);
+} 
+.appSub .main-content .section .home .homeInner .myImg .myImgInner::after{
+  position: absolute;
+  content: '';
+  height: 30%;
+  width: 30%;
+  right: 0;
+  bottom: 0;
+  border-right: 5px solid var(--skin-color);
+  border-bottom: 5px solid var(--skin-color);
+} 
+.appSub .main-content .section .home .homeInner .myImg .myImgInner img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+} 
+/* About */
+.appSub .main-content .section .about{
+  position: relative;
+  text-align: left;
+  background-color: var(--bg-light-cream);
+  padding: 10px;
+  border-radius: 10px;
+}
+.appSub .main-content .section .myDetails{
+  display: flex;
+  flex-wrap: wrap;
+}
+.appSub .main-content .section .myDetails .personalDetails{
+  flex:0 0 60%;
+  max-width: 0 0 60%;
+  transition: var(--transition);
+}
+.appSub .main-content .section .myDetails .educationDetails{
+  flex:0 0 40%;
+  max-width: 0 0 40%;
+  transition: var(--transition);
+}
+.appSub .main-content .section .myDetails .personalDetails .personDetailsInner{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.appSub .main-content .section .myDetails .personalDetails .personDetailsInner .pDetailItem{
+  flex:0 0 48%;
+  max-width: 0 0 48%;
+  text-align: left;
+  transition: var(--transition);
+  border-bottom: 1px solid #ccc;
+}
+.appSub .main-content .section .myDetails .educationDetails .eDetailInner{
+  position: relative;
+  padding: 10px 15px;
+}
+
+/* Skills */
+.appSub .main-content .section .skills{
+  position: relative;
+  background-color: var(--bg-light-cream);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: left;
+}
+.appSub .main-content .section .skills .skillsInner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.appSub .main-content .section .skills .skillsInner .skillItem{
+  flex:0 0 49%;
+}
+.appSub .main-content .section .skills .skillsInner .skillItem .progress{
+  position: relative;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+.appSub .main-content .section .skills .skillsInner .skillItem .progress .progressItemDetail{
+  display: flex;
+  justify-content: space-between;
+}
+.appSub .main-content .section .skills .skillsInner .skillItem .progress progress{
+ width: 100%;
+}
+/* Services */
+.appSub .main-content .section .serviceSub{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+.appSub .main-content .section .serviceSub .service-item{
+  flex: 0 0 33.33%;
+  max-width: 0 0 33.33%;
+  margin-bottom: 10px;
+  padding: 0px 5px;
+  box-sizing: border-box;
+}
+.appSub .main-content .section .serviceSub .service-item .service-item-inner{
+  background-color: var(--bg-light-cream);
+  border: 1px solid var(--bg-dark-cream);
+  border-radius: 10px;
+  padding: 30px 10px;
+  text-align: center;
+}
+.appSub .main-content .section .serviceSub .service-item .service-item-inner .icon{
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  margin: 0px auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.appSub .main-content .section .serviceSub .service-item svg{
+  color: var(--skin-color);
+  font-size: 30px;
+  transition: all 0.3s ease-in-out;
+}
+.appSub .main-content .section .serviceSub .service-item .service-item-inner:hover .icon{
+  background-color: var(--skin-color);
+}
+.appSub .main-content .section .serviceSub .service-item .service-item-inner:hover .icon svg{
+  color:var(--bg-light-cream);
+  transform: scale(.7);
+}
+
+/* Contact */
+.appSub .main-content .section .contact{
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--bg-light-cream);
+}
+.appSub .main-content .section .contact .contactInner .contactData {
+  position: relative;
+}
+.appSub .main-content .section .contact .contactInner .contactData h4{
+  color: var(--skin-color);
+}
+.appSub .main-content .section .contact .contactInner .contactData .contactWay {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.appSub .main-content .section .contact .contactInner .contactData .contactWay .contactWayItem{
+  flex: 0 0 25%;
+  max-width: 0 0 25%;
+}
+.appSub .main-content .section .contact .contactInner .contactData .contactWay .contactWayItem svg{
+  color: var(--skin-color);
+  font-size: 30px;
+  transition: all .3s ease-in-out;
+}
+.appSub .main-content .section .contact .contactInner .contactData .contactWay .contactWayItem .icon{
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  margin: 0px auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.appSub .main-content .section .contact .contactInner .contactData .contactWay .contactWayItem:hover .icon{
+  background-color: var(--skin-color);
+}
+.appSub .main-content .section .contact .contactInner .contactData .contactWay .contactWayItem:hover .icon svg{
+  color:var(--bg-light-cream);
+  transform: scale(.7);
+}
+.appSub .main-content .section .contact .contactInner .contactData .contactForm .form form{
+ display: flex;
+ flex-direction: column; 
+}
+.appSub .main-content .section .contact .contactInner .contactData .contactForm .form form div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ }
+ .appSub .main-content .section .contact .contactInner .contactData .contactForm .form form div input{
+  flex: 0 0 48%;
+ }
+ .appSub .main-content .section .contact .contactInner .contactData .contactForm .form form input,.form form textarea{
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  outline: none;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+ }
+ .form form input[type='submit']{
+   width: 150px;
+   background-color: var(--skin-color);
+   color: var(--bg-light-cream);
+ }
+
+ /* ThemeCHanger */
+.themeChanger{
+  position: fixed;
+  right: -205px;
+  top: 0;
+  z-index: 10;
+  background-color: var(--not-full-black);
+  border-radius: 10px 0px 0px 10px;
+  transition: var(--transition);
+}
+.themeChanger.dark{
+  background-color: var(--bg-light-cream);
+  border: 1px solid var(--skin-color);
+  box-shadow: 0 .1rem .1rem var(--skin-color);
+}
+@media screen and (min-width:992px) {
+  .themeChanger.active{
+    right: 0px !important;
+  }
+}
+.themeChanger .themeChangerInner{
+  position: relative;
+  padding: 10px;
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+}
+.themeChanger .themeChangerInner .colorChanger{
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+.themeChanger .themeChangerInner .colorChanger .themespan{
+  display: block;
+  width: 30px;
+  height:30px;
+ border-radius: 50%;
+}
+.themeChanger .themeChangerInner .colorChanger .themespan.active{
+  box-shadow: 0 0.01rem 0.4rem #fff;
+}
+.themeChanger.dark .themespan.active{
+  box-shadow: 0 0.01rem 0.4rem var(--not-full-black) !important;
+}
+.themeChanger .themeChangerInner .modeChanger{
+  position: relative;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.themeChanger .themeChangerInner .modeChanger svg{
+font-size: 20px;
+}
+.themeChanger.dark .modeChanger svg{
+  color: var(--not-full-black) !important;
+}
+/* Media Query */
+@media screen and (max-width:991px) {
+  .aside{
+    left: -50% !important;
+    width: 50% !important;
+  }
+  .aside.active{
+    left: 0% !important;
+  }
+  .smallScreenOpen{
+    visibility: visible !important;
+  }
+  .main-content{
+    width: 100% !important;
+    float: none;
+  }
+  .service-item,.contactWayItem, .myDescription,.myImg{
+    flex: 0 0 50% !important;
+    max-width: 0 0 50%;
+  }
+  .form form div input,.skillItem,.personalDetails,.educationDetails{
+    flex: 0 0 100% !important;
+  }
+  .themeChanger{
+    right: -45px !important;
+    top: 10%;
+  }
+  .themeChanger.active{
+    right: 0px !important;
+  }
+  .themeChanger .themeChangerInner{
+    width: 80px;
+    padding: 3px;
+    box-sizing: border-box;
+  }
+  .themeChanger .themeChangerInner .modeChanger{
+    padding: 0px 5px;
+  }
+  .themeChanger .themeChangerInner .colorChanger{
+    flex-direction: column;
+    padding: 0px 5px;
+    justify-content: space-between !important;
+    align-items:center;
+    margin-bottom: 0px;
+  }
+  .themeChanger .themeChangerInner .colorChanger .themespan{
+    margin: 3px 0px;
+  }
+}
+@media screen and (max-width:767px) {
+  .myDescription,.myImg,.pDetailItem{
+    flex: 0 0 100% !important;
+  }
+}
+@media screen and (max-width:567px) {
+  .aside{
+    left: -75% !important;
+    width: 75% !important;
+  }
+  .aside.active{
+    left: 0% !important;
+  }
+  .main-content{
+    width: 100% !important;
+    float: none;
+  }
+  .service-item,.contactWayItem{
+    flex: 0 0 100% !important;
+    max-width: 0 0 50%;
+  }
+  .pageHeading{
+    text-align: center !important;
   }
 }
